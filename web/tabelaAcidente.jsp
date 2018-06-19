@@ -78,7 +78,7 @@
                                     </c:if>
                                 </table>
                                 <c:choose>
-                                    <c:when test="${usuario.funcao eq 'administrador'}">
+                                    <c:when test="${usuario.funcao eq 'Administrador'}">
                                         <div class="form-group">
                                             <div class="col-md-2 col-md-offset-4">
                                                 <button type="submit" name="opcao" value="editar" class="btn btn-default">
@@ -92,7 +92,7 @@
                                             </div>
                                         </div>
                                     </c:when>
-                                    <c:when test="${usuario.funcao eq 'operador'}">
+                                    <c:when test="${usuario.funcao eq 'Coordenador de Controle Operacional'}">
                                         <div class="form-group">
                                             <div class="col-md-2 col-md-offset-4">
                                                 <button type="submit" name="opcao" value="editar" class="btn btn-default">

@@ -22,7 +22,7 @@
                                 <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span></span>
                                 <select class="form-control" name="fonte" aria-describedby="basic-addon1">
                                     <option value="Todos">Todos os Usuários</option> 
-                                    <option value="CPF">CPF</option> 
+                                    <option value="Codigo">Codigo</option> 
                                     <option value="Nome">Nome</option>
                                 </select>
                             </div>
@@ -33,7 +33,7 @@
                         <div class="col-md-9">
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-                                <input type="text" class="form-control" name="valor" placeholder="CPF ou Nome" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" name="valor" placeholder="Codigo ou Nome" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>

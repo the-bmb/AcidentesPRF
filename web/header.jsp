@@ -27,14 +27,14 @@
                                     </a>
                                 </li>
                                 <c:choose>
-                                    <c:when test="${ usuario.funcao eq 'administrador' }">
+                                    <c:when test="${ usuario.funcao eq 'Administrador' }">
                                         <li><a href="/AcidentesPRF/inserirAcidente.jsp">Inserir Acidente</a></li>
                                         <li><a href="/AcidentesPRF/buscarAcidente.jsp">Buscar Acidente</a></li>
                                         <li><a href="/AcidentesPRF/inserirUsuario.jsp">Inserir Usuário</a></li>
                                         <li><a href="/AcidentesPRF/buscarUsuario.jsp">Buscar Usuário</a></li>
                                         <li><a href="/AcidentesPRF/setarRelatorio.jsp">Gerar Relatórios</a></li>
                                         </c:when>
-                                        <c:when test="${ usuario.funcao eq 'operador' }">
+                                        <c:when test="${ usuario.funcao eq 'Coordenador de Controle Operacional' }">
                                         <li><a href="/AcidentesPRF/inserirAcidente.jsp">Inserir Acidente</a></li>
                                         <li><a href="/AcidentesPRF/buscarAcidente.jsp">Buscar Acidente</a></li>
                                         <li><a href="/AcidentesPRF/setarRelatorio.jsp">Gerar Relatórios</a></li>

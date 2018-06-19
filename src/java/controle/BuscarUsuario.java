@@ -13,7 +13,7 @@ import mapeamento.Usuario;
 public class BuscarUsuario extends HttpServlet {
 
     private String fonte;
-    private String cpf;
+    private String codigo;
     private String nome;
     private List<Usuario> usuarios;
     private UsuarioDAO dao;
@@ -25,10 +25,10 @@ public class BuscarUsuario extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         try {
             fonte = request.getParameter("fonte");
-            if (fonte.equals("CPF")) {
-                cpf = request.getParameter("valor");
+            if (fonte.equals("Codigo")) {
+                codigo = request.getParameter("valor");
                 dao = new UsuarioDAO();
-                usuarios = dao.buscarPorCpf(cpf);
+                usuarios = dao.buscarPorCpf(codigo);
                 if (!usuarios.isEmpty()) {
                     session.setAttribute("lista", usuarios);
                     session.setAttribute("flag", true);

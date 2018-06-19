@@ -26,9 +26,9 @@ public class UsuarioDAO {
         sessao.close();
     }
 
-    public Usuario login(String cpf, String senha) {
+    public Usuario login(String codigo, String senha) {
         ArrayList<Usuario> usuarios = (ArrayList<Usuario>) sessao.createQuery("from "
-                + "Usuario where cpf = '" + cpf + "' and senha = '" + senha + "'").list();
+                + "Usuario where codigo = '" + codigo + "' and senha = '" + senha + "'").list();
         Usuario usuario = new Usuario();
         for (Usuario u : usuarios) {
             usuario = u;
@@ -52,8 +52,8 @@ public class UsuarioDAO {
         return (ArrayList<Usuario>) sessao.createQuery("from Usuario order by nome").list();
     }
 
-    public ArrayList<Usuario> buscarPorCpf(String cpf) {
-        ArrayList<Usuario> usuarios = (ArrayList<Usuario>) sessao.createQuery("from Usuario where cpf like '%" + cpf + "%' order by cpf").list();
+    public ArrayList<Usuario> buscarPorCpf(String codigo) {
+        ArrayList<Usuario> usuarios = (ArrayList<Usuario>) sessao.createQuery("from Usuario where codigo like '%" + codigo + "%' order by codigo").list();
         return usuarios;
     }
     
@@ -62,9 +62,9 @@ public class UsuarioDAO {
         return usuarios;
     }
 
-    public void excluir(String cpf) {
+    public void excluir(String codigo) {
         Usuario usuario = new Usuario();
-        sessao.load(usuario, cpf);
+        sessao.load(usuario, codigo);
         sessao.delete(usuario);
         Transaction tr = sessao.beginTransaction();
         tr.commit();

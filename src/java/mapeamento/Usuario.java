@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class Usuario  implements java.io.Serializable {
 
 
-     private String cpf;
+     private String codigo;
      private String nome;
      private String senha;
      private String funcao;
@@ -25,8 +25,8 @@ public class Usuario  implements java.io.Serializable {
     public Usuario() {
     }
 
-    public Usuario(String cpf, String nome, String senha, String funcao) {
-       this.cpf = cpf;
+    public Usuario(String codigo, String nome, String senha, String funcao) {
+       this.codigo = codigo;
        this.nome = nome;
        this.senha = senha;
        this.funcao = funcao;
@@ -35,13 +35,13 @@ public class Usuario  implements java.io.Serializable {
      @Id 
 
     
-    @Column(name="cpf", nullable=false, length=11)
-    public String getCpf() {
-        return this.cpf;
+    @Column(name="codigo", nullable=false, length=11)
+    public String getCodigo() {
+        return this.codigo;
     }
     
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     

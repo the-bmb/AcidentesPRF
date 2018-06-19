@@ -35,7 +35,7 @@
                         %>
                     </c:if>
                     <c:if test="${flag eq false}">
-                        <p class="bg-danger" style="color:red">cpf e/ou senha incorretos ou inexistentes</p>
+                        <p class="bg-danger" style="color:red">codigo e/ou senha incorretos ou inexistentes</p>
                         <%
                             session.setAttribute("flag", null);
                         %>
@@ -49,9 +49,9 @@
                         <div class="panel-body">
                             <form class="form-horizontal" method="POST" action="/AcidentesPRF/LoginAuthentication">
                                 <div class="form-group">
-                                    <label class="col-md-2 col-md-offset-1 control-label">CPF</label>
+                                    <label class="col-md-2 col-md-offset-1 control-label">Codigo</label>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" name="cpf" placeholder="Números do CPF" required="required">
+                                        <input type="text" class="form-control" name="codigo" placeholder="Números do Codigo" required="required">
                                     </div>
                                 </div>
                                 <div class="form-group">

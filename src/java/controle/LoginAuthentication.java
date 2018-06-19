@@ -12,7 +12,7 @@ import mapeamento.Usuario;
 public class LoginAuthentication extends HttpServlet {
 
     private String senha;
-    private String cpf;
+    private String codigo;
     private Usuario usuario;
     private UsuarioDAO dao;
 
@@ -23,11 +23,11 @@ public class LoginAuthentication extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         dao = new UsuarioDAO();
         usuario = new Usuario();
-        cpf = request.getParameter("cpf");
+        codigo = request.getParameter("codigo");
         senha = request.getParameter("senha");
         try {
-            usuario = dao.login(cpf, senha);
-            if (cpf.equals(usuario.getCpf())) {
+            usuario = dao.login(codigo, senha);
+            if (codigo.equals(usuario.getCpf())) {
                 session.setAttribute("usuario", usuario);
                 RequestDispatcher r = request.getRequestDispatcher("/index.jsp");
                 r.forward(request, response);

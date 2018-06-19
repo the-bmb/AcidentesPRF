@@ -13,7 +13,7 @@ public class EditarUsuario extends HttpServlet {
 
     private Usuario usuario;
     private UsuarioDAO dao;
-    private String cpf;
+    private String codigo;
     private String nome;
     private String funcao;
     private String senha;
@@ -23,7 +23,7 @@ public class EditarUsuario extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         // pega parâmetros do request
-        cpf = request.getParameter("cpf");
+        codigo = request.getParameter("codigo");
         nome = request.getParameter("nome");
         funcao = request.getParameter("funcao");
         senha = request.getParameter("senha");
@@ -31,7 +31,7 @@ public class EditarUsuario extends HttpServlet {
         //Cria objeto acidente
         usuario = new Usuario();
         dao = new UsuarioDAO();
-        usuario.setCpf(cpf);
+        usuario.setCpf(codigo);
         usuario.setNome(nome);
         usuario.setFuncao(funcao);
         usuario.setSenha(senha);

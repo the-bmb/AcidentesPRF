@@ -27,18 +27,18 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label">CPF</label>
+                    <label class="col-md-2 control-label">Codigo</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" name="cpf" required="required">
+                        <input type="text" class="form-control" name="codigo" required="required">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label">Função</label>
                     <div class="col-md-9">
                         <select class="form-control" name="funcao"> 
-                            <option value="administrador">Administrador</option> 
-                            <option value="operador">Operador</option> 
-                            <option value="usuario">Usuário Comum</option> 
+                            <option value="Administrador">Administrador</option> 
+                            <option value="Coordenador de Controle Operacional">Coordenador(a) de Controle Operacional</option> 
+                            <option value="Planejador Operacional">Planejador(a) Operacional</option> 
                         </select>
                     </div>
                 </div>

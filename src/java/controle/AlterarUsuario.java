@@ -13,7 +13,7 @@ import mapeamento.Usuario;
 public class AlterarUsuario extends HttpServlet {
 
     private String opcao;
-    private String cpf;
+    private String codigo;
     private List<Usuario> usuarios;
     private Usuario usuario;
     private UsuarioDAO dao;
@@ -25,9 +25,9 @@ public class AlterarUsuario extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         try {
             opcao = request.getParameter("opcao");
-            cpf = request.getParameter("cpf");
+            codigo = request.getParameter("codigo");
             dao = new UsuarioDAO();
-            usuarios = dao.buscarPorCpf(cpf);
+            usuarios = dao.buscarPorCpf(codigo);
             for(Usuario u : usuarios){
                 usuario = u;
             }

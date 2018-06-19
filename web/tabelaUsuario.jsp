@@ -13,14 +13,14 @@
                                 <table class="table table-striped">
                                     <tr>
                                         <th></th>
-                                        <th>CPF</th>
+                                        <th>Codigo</th>
                                         <th>Nome</th>
                                         <th>Função</th>
                                     </tr>
                                     <c:forEach var="item" items="${lista}">
                                         <tr>
-                                            <td><input type="radio" name="cpf" value="${item.cpf}" checked></td>
-                                            <td>${item.cpf}</td>
+                                            <td><input type="radio" name="codigo" value="${item.codigo}" checked></td>
+                                            <td>${item.codigo}</td>
                                             <td>${item.nome}</td>
                                             <td>${item.funcao}</td>
                                         </tr>

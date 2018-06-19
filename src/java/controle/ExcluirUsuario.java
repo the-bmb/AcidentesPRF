@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class ExcluirUsuario extends HttpServlet {
 
     private UsuarioDAO dao;
-    private String cpf;
+    private String codigo;
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -19,9 +19,9 @@ public class ExcluirUsuario extends HttpServlet {
         HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
         try {
-            cpf = request.getParameter("cpf");
+            codigo = request.getParameter("codigo");
             dao = new UsuarioDAO();
-            dao.excluir(cpf);
+            dao.excluir(codigo);
             session.setAttribute("flag", true);
             RequestDispatcher r = request.getRequestDispatcher("/excluirUsuario.jsp");
             r.forward(request, response);
