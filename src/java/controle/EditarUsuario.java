@@ -31,7 +31,7 @@ public class EditarUsuario extends HttpServlet {
         //Cria objeto acidente
         usuario = new Usuario();
         dao = new UsuarioDAO();
-        usuario.setCpf(codigo);
+        usuario.setCodigo(codigo);
         usuario.setNome(nome);
         usuario.setFuncao(funcao);
         usuario.setSenha(senha);

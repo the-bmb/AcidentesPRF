@@ -27,7 +27,7 @@ public class LoginAuthentication extends HttpServlet {
         senha = request.getParameter("senha");
         try {
             usuario = dao.login(codigo, senha);
-            if (codigo.equals(usuario.getCpf())) {
+            if (codigo.equals(usuario.getCodigo())) {
                 session.setAttribute("usuario", usuario);
                 RequestDispatcher r = request.getRequestDispatcher("/index.jsp");
                 r.forward(request, response);
