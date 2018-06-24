@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2018 02:43:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="mapeamento.Tipoveiculo" optimistic-lock="version" schema="public" table="tipoveiculo">
+    <id name="tvvcodigo" type="int">
+      <column name="tvvcodigo"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="tvvdescricao" type="string">
+      <column length="20" name="tvvdescricao"/>
+    </property>
+    <property name="tvvatualiza" type="java.lang.Character">
+      <column length="1" name="tvvatualiza"/>
+    </property>
+    <property name="tvvrelacidente" type="java.lang.Character">
+      <column length="1" name="tvvrelacidente"/>
+    </property>
+    <property name="tvvativo" type="java.lang.Character">
+      <column length="1" name="tvvativo"/>
+    </property>
+  </class>
+</hibernate-mapping>

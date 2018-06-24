@@ -102,33 +102,33 @@ public class EditarAcidente extends HttpServlet {
         //Cria objeto data
         data = new Data();
         dDao = new DataDAO();
-        data.setAcidente(acidente);
+//        data.setAcidente(acidente);
         data.setId(acidente.getId());
         data.setDiaSemana(diaSemana);
         data.setDataAcidente(dataAcidente);
-        data.setHorario(horario);
+//        data.setHorario(horario);
 
         //Cria objeto local
         local = new Local();
         lDao = new LocalDAO();
-        local.setAcidente(acidente);
+//        local.setAcidente(acidente);
         local.setId(acidente.getId());
         local.setUf(estado);
         local.setBr(rodovia);
-        local.setKm(km);
+//        local.setKm(km);
         local.setMunicipio(municipio);
 
         //Cria objeto condição
         condicao = new Condicao();
         cDao = new CondicaoDAO();
-        condicao.setAcidente(acidente);
+//        condicao.setAcidente(acidente);
         condicao.setId(acidente.getId());
         condicao.setCausaAcidente(causa);
         condicao.setTipoAcidente(tipoAcidente);
         condicao.setClassificacaoAcidente(classificacaoAcidente);
         condicao.setFaseDia(faseDia);
         condicao.setSentidoVia(sentidoVia);
-        condicao.setCondMetereologica(condMetereologica);
+//        condicao.setCondMetereologica(condMetereologica);
         condicao.setTipoPista(tipoPista);
         condicao.setTracadoVia(tracadoVia);
         condicao.setUsoSolo(usoSolo);

@@ -1,24 +1,20 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 11/05/2017 13:08:58 by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2018 02:43:02 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="mapeamento.Data" table="data" schema="public" optimistic-lock="version">
-        <id name="id" type="int">
-            <column name="id" />
-            <generator class="foreign">
-                <param name="property">acidente</param>
-            </generator>
-        </id>
-        <one-to-one name="acidente" class="mapeamento.Acidente" constrained="true"></one-to-one>
-        <property name="diaSemana" type="string">
-            <column name="dia_semana" length="15" />
-        </property>
-        <property name="dataAcidente" type="date">
-            <column name="data_acidente" length="13" />
-        </property>
-        <property name="horario" type="java.lang.Integer">
-            <column name="horario" />
-        </property>
-    </class>
+  <class name="mapeamento.Data" optimistic-lock="version" schema="public" table="data">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="diaSemana" type="string">
+      <column length="15" name="dia_semana"/>
+    </property>
+    <property name="dataAcidente" type="date">
+      <column length="13" name="data_acidente"/>
+    </property>
+    <property name="horario" type="time">
+      <column length="15" name="horario"/>
+    </property>
+  </class>
 </hibernate-mapping>

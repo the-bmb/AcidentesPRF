@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2018 02:43:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="mapeamento.Municipio" optimistic-lock="version" schema="public" table="municipio">
+    <id name="tmucodigo" type="string">
+      <column length="5" name="tmucodigo"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="tmuuf" type="string">
+      <column length="2" name="tmuuf"/>
+    </property>
+    <property name="tmudenominacao" type="string">
+      <column length="50" name="tmudenominacao"/>
+    </property>
+  </class>
+</hibernate-mapping>

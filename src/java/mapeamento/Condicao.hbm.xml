@@ -1,42 +1,38 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 11/05/2017 13:08:58 by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2018 02:43:02 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="mapeamento.Condicao" table="condicao" schema="public" optimistic-lock="version">
-        <id name="id" type="int">
-            <column name="id" />
-            <generator class="foreign">
-                <param name="property">acidente</param>
-            </generator>
-        </id>
-        <one-to-one name="acidente" class="mapeamento.Acidente" constrained="true"></one-to-one>
-        <property name="causaAcidente" type="string">
-            <column name="causa_acidente" length="200" />
-        </property>
-        <property name="tipoAcidente" type="string">
-            <column name="tipo_acidente" length="200" />
-        </property>
-        <property name="classificacaoAcidente" type="string">
-            <column name="classificacao_acidente" length="200" />
-        </property>
-        <property name="faseDia" type="string">
-            <column name="fase_dia" length="200" />
-        </property>
-        <property name="sentidoVia" type="string">
-            <column name="sentido_via" length="200" />
-        </property>
-        <property name="condMetereologica" type="string">
-            <column name="cond_metereologica" length="200" />
-        </property>
-        <property name="tipoPista" type="string">
-            <column name="tipo_pista" length="200" />
-        </property>
-        <property name="tracadoVia" type="string">
-            <column name="tracado_via" length="200" />
-        </property>
-        <property name="usoSolo" type="string">
-            <column name="uso_solo" length="200" />
-        </property>
-    </class>
+  <class name="mapeamento.Condicao" optimistic-lock="version" schema="public" table="condicao">
+    <id name="id" type="int">
+      <column name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="causaAcidente" type="string">
+      <column length="200" name="causa_acidente"/>
+    </property>
+    <property name="tipoAcidente" type="string">
+      <column length="200" name="tipo_acidente"/>
+    </property>
+    <property name="classificacaoAcidente" type="string">
+      <column length="200" name="classificacao_acidente"/>
+    </property>
+    <property name="faseDia" type="string">
+      <column length="200" name="fase_dia"/>
+    </property>
+    <property name="sentidoVia" type="string">
+      <column length="200" name="sentido_via"/>
+    </property>
+    <property name="condMetereologico" type="string">
+      <column length="200" name="cond_metereologico"/>
+    </property>
+    <property name="tipoPista" type="string">
+      <column length="200" name="tipo_pista"/>
+    </property>
+    <property name="tracadoVia" type="string">
+      <column length="200" name="tracado_via"/>
+    </property>
+    <property name="usoSolo" type="string">
+      <column length="200" name="uso_solo"/>
+    </property>
+  </class>
 </hibernate-mapping>

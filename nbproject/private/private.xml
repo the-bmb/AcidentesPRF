@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/controle/GerarRelatorio.java</file>
+            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/controle/AlterarUsuario.java</file>
+            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/controle/InserirAcidente.java</file>
+            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/nbproject/build-impl.xml</file>
             <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/controle/EditarAcidente.java</file>
+            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/mapeamento/Acidente.java</file>
+            <file>file:/C:/Users/Bruna/Documents/AcidentesPRF-master/src/java/mapeamento/Data.java</file>
         </group>
     </open-files>
 </project-private>
