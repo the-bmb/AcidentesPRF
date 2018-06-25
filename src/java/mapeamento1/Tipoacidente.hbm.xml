@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapeamento1.Tipoacidente" table="tipoacidente" schema="public" optimistic-lock="version">
+        <id name="ttacodigo" type="int">
+            <column name="ttacodigo" />
+            <generator class="assigned" />
+        </id>
+        <property name="ttaatualiza" type="java.lang.Character">
+            <column name="ttaatualiza" length="1" />
+        </property>
+        <property name="ttarelacidente" type="java.lang.Character">
+            <column name="ttarelacidente" length="1" />
+        </property>
+        <property name="ttaativo" type="java.lang.Character">
+            <column name="ttaativo" length="1" />
+        </property>
+        <property name="ttadescricao" type="string">
+            <column name="ttadescricao" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

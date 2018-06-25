@@ -2,8 +2,8 @@ package controle;
 
 import java.util.ArrayList;
 import java.util.List;
-import mapeamento.Local;
-import mapeamento.HibernateUtil;
+import mapeamento1.Local;
+import mapeamento1.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

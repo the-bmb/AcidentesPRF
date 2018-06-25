@@ -1,5 +1,5 @@
-package mapeamento;
-// Generated 24/06/2018 02:43:00 by Hibernate Tools 4.3.1
+package mapeamento1;
+// Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1
 
 
 

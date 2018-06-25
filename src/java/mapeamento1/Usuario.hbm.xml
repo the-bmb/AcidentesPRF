@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 11/05/2017 13:08:58 by Hibernate Tools 4.3.1 -->
+<!-- Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="mapeamento.Usuario" table="usuario" schema="public" optimistic-lock="version">
-        <id name="codigo" type="string">
-            <column name="codigo" length="11" />
+    <class name="mapeamento1.Usuario" table="usuario" schema="public" optimistic-lock="version">
+        <id name="codigo" type="int">
+            <column name="codigo" />
             <generator class="assigned" />
         </id>
         <property name="nome" type="string">
-            <column name="nome" length="100" not-null="true" />
+            <column name="nome" length="70" />
         </property>
         <property name="senha" type="string">
-            <column name="senha" length="100" not-null="true" />
+            <column name="senha" length="12" />
         </property>
         <property name="funcao" type="string">
-            <column name="funcao" length="100" not-null="true" />
+            <column name="funcao" length="50" />
         </property>
     </class>
 </hibernate-mapping>

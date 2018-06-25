@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Usuario;
+import mapeamento1.Usuario;
 
 public class AlterarUsuario extends HttpServlet {
 
     private String opcao;
-    private String codigo;
+    private Integer codigo;
     private List<Usuario> usuarios;
     private Usuario usuario;
     private UsuarioDAO dao;
@@ -25,9 +25,9 @@ public class AlterarUsuario extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         try {
             opcao = request.getParameter("opcao");
-            codigo = request.getParameter("codigo");
+            codigo = Integer.parseInt(request.getParameter("codigo"));
             dao = new UsuarioDAO();
-            usuarios = dao.buscarPorCpf(codigo);
+            usuarios = dao.buscarPorCodigo(codigo);
             for(Usuario u : usuarios){
                 usuario = u;
             }

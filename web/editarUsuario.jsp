@@ -37,7 +37,7 @@
                     <div class="col-md-9">
                         <select class="form-control" name="funcao"> 
                             <option value="${user.funcao}">${user.funcao}</option>
-                            <option value="Administrador">Administrador</option> 
+                            <option value="administrador">Administrador</option> 
                             <option value="Coordenador de Controle Operacional">Coordenador(a) de Controle Operacional</option> 
                             <option value="Planejador Operacional">Planejador(a) Operacional</option> 
                         </select>

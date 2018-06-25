@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Data;
-import mapeamento.Local;
+import mapeamento1.Data;
+import mapeamento1.Local;
 
 public class BuscarAcidente extends HttpServlet {
 

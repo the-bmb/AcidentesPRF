@@ -1,8 +1,8 @@
 package controle;
 
 import java.util.ArrayList;
-import mapeamento.Usuario;
-import mapeamento.HibernateUtil;
+import mapeamento1.Usuario;
+import mapeamento1.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -26,7 +26,7 @@ public class UsuarioDAO {
         sessao.close();
     }
 
-    public Usuario login(String codigo, String senha) {
+    public Usuario login(Integer codigo, String senha) {
         ArrayList<Usuario> usuarios = (ArrayList<Usuario>) sessao.createQuery("from "
                 + "Usuario where codigo = '" + codigo + "' and senha = '" + senha + "'").list();
         Usuario usuario = new Usuario();
@@ -52,7 +52,7 @@ public class UsuarioDAO {
         return (ArrayList<Usuario>) sessao.createQuery("from Usuario order by nome").list();
     }
 
-    public ArrayList<Usuario> buscarPorCpf(String codigo) {
+    public ArrayList<Usuario> buscarPorCodigo(Integer codigo) {
         ArrayList<Usuario> usuarios = (ArrayList<Usuario>) sessao.createQuery("from Usuario where codigo like '%" + codigo + "%' order by codigo").list();
         return usuarios;
     }
@@ -62,7 +62,7 @@ public class UsuarioDAO {
         return usuarios;
     }
 
-    public void excluir(String codigo) {
+    public void excluir(Integer codigo) {
         Usuario usuario = new Usuario();
         sessao.load(usuario, codigo);
         sessao.delete(usuario);

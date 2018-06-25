@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class ExcluirUsuario extends HttpServlet {
 
     private UsuarioDAO dao;
-    private String codigo;
+    private Integer codigo;
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -19,7 +19,7 @@ public class ExcluirUsuario extends HttpServlet {
         HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
         try {
-            codigo = request.getParameter("codigo");
+            codigo = Integer.parseInt(request.getParameter("codigo"));
             dao = new UsuarioDAO();
             dao.excluir(codigo);
             session.setAttribute("flag", true);

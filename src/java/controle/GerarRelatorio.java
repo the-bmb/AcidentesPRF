@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Data;
+import mapeamento1.Data;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -300,6 +300,8 @@ public class GerarRelatorio extends HttpServlet {
                 dFinal = new Date(ano, mes, dia);
                 dDao = new DataDAO();
                 datas = dDao.buscar(dInicial, dFinal);
+                session.setAttribute("dInicial", dInicial);
+                session.setAttribute("dFinal", dFinal);
                 if (busca.equals("causa")) {
                     long[] cont = new long[11];
                     cDao = new CondicaoDAO();

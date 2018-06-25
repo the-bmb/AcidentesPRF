@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Acidente;
+import mapeamento1.Acidente;
 
 public class AlterarAcidente extends HttpServlet {
 

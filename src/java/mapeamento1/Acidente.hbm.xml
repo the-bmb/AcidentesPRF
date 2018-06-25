@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapeamento1.Acidente" table="acidente" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="pessoas" type="java.lang.Integer">
+            <column name="pessoas" />
+        </property>
+        <property name="mortos" type="java.lang.Integer">
+            <column name="mortos" />
+        </property>
+        <property name="feridosLeves" type="java.lang.Integer">
+            <column name="feridos_leves" />
+        </property>
+        <property name="feridosGraves" type="java.lang.Integer">
+            <column name="feridos_graves" />
+        </property>
+        <property name="ilesos" type="java.lang.Integer">
+            <column name="ilesos" />
+        </property>
+        <property name="ignorados" type="java.lang.Integer">
+            <column name="ignorados" />
+        </property>
+        <property name="feridos" type="java.lang.Integer">
+            <column name="feridos" />
+        </property>
+        <property name="veiculos" type="java.lang.Integer">
+            <column name="veiculos" />
+        </property>
+        <set name="condicaos" table="condicao" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idacidente" />
+            </key>
+            <one-to-many class="mapeamento1.Condicao" />
+        </set>
+        <set name="locals" table="local" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idacidente" />
+            </key>
+            <one-to-many class="mapeamento1.Local" />
+        </set>
+        <set name="datas" table="data" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idacidente" />
+            </key>
+            <one-to-many class="mapeamento1.Data" />
+        </set>
+    </class>
+</hibernate-mapping>

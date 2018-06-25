@@ -7,12 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Usuario;
+import mapeamento1.Usuario;
 
 public class LoginAuthentication extends HttpServlet {
 
     private String senha;
-    private String codigo;
+    private Integer codigo;
     private Usuario usuario;
     private UsuarioDAO dao;
 
@@ -23,7 +23,7 @@ public class LoginAuthentication extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         dao = new UsuarioDAO();
         usuario = new Usuario();
-        codigo = request.getParameter("codigo");
+        codigo = Integer.parseInt(request.getParameter("codigo"));
         senha = request.getParameter("senha");
         try {
             usuario = dao.login(codigo, senha);

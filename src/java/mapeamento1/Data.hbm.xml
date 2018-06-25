@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapeamento1.Data" table="data" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="acidente" class="mapeamento1.Acidente" fetch="select">
+            <column name="idacidente" />
+        </many-to-one>
+        <property name="diaSemana" type="string">
+            <column name="dia_semana" length="15" />
+        </property>
+        <property name="dataAcidente" type="date">
+            <column name="data_acidente" length="13" />
+        </property>
+        <property name="horario" type="time">
+            <column name="horario" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

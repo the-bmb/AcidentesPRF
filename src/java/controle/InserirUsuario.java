@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Usuario;
+import mapeamento1.Usuario;
 
 public class InserirUsuario extends HttpServlet {
 
     private Usuario usuario;
     private UsuarioDAO dao;
-    private String codigo;
+    private Integer codigo;
     private String nome;
     private String funcao;
     private String senha;
@@ -23,7 +23,7 @@ public class InserirUsuario extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         // pega parâmetros do request
-        codigo = request.getParameter("codigo");
+        codigo = Integer.parseInt(request.getParameter("codigo"));
         nome = request.getParameter("nome");
         funcao = request.getParameter("funcao");
         senha = request.getParameter("senha");
@@ -38,7 +38,7 @@ public class InserirUsuario extends HttpServlet {
 
         HttpSession session = request.getSession();
         try {
-            if(dao.buscarPorCpf(codigo).isEmpty()){
+            if(dao.buscarPorCodigo(codigo).isEmpty()){
                 dao.salvar(usuario);
                 session.setAttribute("flag", true);
                 RequestDispatcher r = request.getRequestDispatcher("/inserirUsuario.jsp");

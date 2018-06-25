@@ -47,14 +47,14 @@ Contributor(s):
     <property name="hibernate.connection.username">postgres</property>
     <property name="hibernate.connection.password">postgres</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <mapping resource="mapeamento/Tipoacidente.hbm.xml"/>
-    <mapping resource="mapeamento/Condicao.hbm.xml"/>
-    <mapping resource="mapeamento/Tipoenvolvido.hbm.xml"/>
-    <mapping resource="mapeamento/Municipio.hbm.xml"/>
-    <mapping resource="mapeamento/Tipoveiculo.hbm.xml"/>
-    <mapping resource="mapeamento/Acidente.hbm.xml"/>
-    <mapping resource="mapeamento/Local.hbm.xml"/>
-    <mapping resource="mapeamento/Data.hbm.xml"/>
-    <mapping resource="mapeamento/Usuario.hbm.xml"/>
+    <mapping resource="mapeamento1/Municipio.hbm.xml"/>
+    <mapping resource="mapeamento1/Local.hbm.xml"/>
+    <mapping resource="mapeamento1/Data.hbm.xml"/>
+    <mapping resource="mapeamento1/Usuario.hbm.xml"/>
+    <mapping resource="mapeamento1/Tipoacidente.hbm.xml"/>
+    <mapping resource="mapeamento1/Tipoenvolvido.hbm.xml"/>
+    <mapping resource="mapeamento1/Tipoveiculo.hbm.xml"/>
+    <mapping resource="mapeamento1/Acidente.hbm.xml"/>
+    <mapping resource="mapeamento1/Condicao.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

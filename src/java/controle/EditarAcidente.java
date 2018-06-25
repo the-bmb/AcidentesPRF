@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Acidente;
-import mapeamento.Condicao;
-import mapeamento.Data;
-import mapeamento.Local;
+import mapeamento1.Acidente;
+import mapeamento1.Condicao;
+import mapeamento1.Data;
+import mapeamento1.Local;
 
 public class EditarAcidente extends HttpServlet {
 
@@ -102,11 +102,11 @@ public class EditarAcidente extends HttpServlet {
         //Cria objeto data
         data = new Data();
         dDao = new DataDAO();
-//        data.setAcidente(acidente);
+        data.setAcidente(acidente);
         data.setId(acidente.getId());
         data.setDiaSemana(diaSemana);
         data.setDataAcidente(dataAcidente);
-//        data.setHorario(horario);
+        data.setHorario(horario);
 
         //Cria objeto local
         local = new Local();

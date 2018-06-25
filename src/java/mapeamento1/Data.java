@@ -1,5 +1,5 @@
-package mapeamento;
-// Generated 24/06/2018 02:43:00 by Hibernate Tools 4.3.1
+package mapeamento1;
+// Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,9 +11,10 @@ public class Data  implements java.io.Serializable {
 
 
      private int id;
+     private Acidente acidente;
      private String diaSemana;
      private Date dataAcidente;
-     private Date horario;
+     private Integer horario;
 
     public Data() {
     }
@@ -22,8 +23,9 @@ public class Data  implements java.io.Serializable {
     public Data(int id) {
         this.id = id;
     }
-    public Data(int id, String diaSemana, Date dataAcidente, Date horario) {
+    public Data(int id, Acidente acidente, String diaSemana, Date dataAcidente, Integer horario) {
        this.id = id;
+       this.acidente = acidente;
        this.diaSemana = diaSemana;
        this.dataAcidente = dataAcidente;
        this.horario = horario;
@@ -35,6 +37,13 @@ public class Data  implements java.io.Serializable {
     
     public void setId(int id) {
         this.id = id;
+    }
+    public Acidente getAcidente() {
+        return this.acidente;
+    }
+    
+    public void setAcidente(Acidente acidente) {
+        this.acidente = acidente;
     }
     public String getDiaSemana() {
         return this.diaSemana;
@@ -50,11 +59,11 @@ public class Data  implements java.io.Serializable {
     public void setDataAcidente(Date dataAcidente) {
         this.dataAcidente = dataAcidente;
     }
-    public Date getHorario() {
+    public Integer getHorario() {
         return this.horario;
     }
     
-    public void setHorario(Date horario) {
+    public void setHorario(Integer horario) {
         this.horario = horario;
     }
 

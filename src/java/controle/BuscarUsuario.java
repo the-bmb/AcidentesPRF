@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import mapeamento.Usuario;
+import mapeamento1.Usuario;
 
 public class BuscarUsuario extends HttpServlet {
 
     private String fonte;
-    private String codigo;
+    private Integer codigo;
     private String nome;
     private List<Usuario> usuarios;
     private UsuarioDAO dao;
@@ -26,9 +26,9 @@ public class BuscarUsuario extends HttpServlet {
         try {
             fonte = request.getParameter("fonte");
             if (fonte.equals("Codigo")) {
-                codigo = request.getParameter("valor");
+                codigo = Integer.parseInt(request.getParameter("codigo"));
                 dao = new UsuarioDAO();
-                usuarios = dao.buscarPorCpf(codigo);
+                usuarios = dao.buscarPorCodigo(codigo);
                 if (!usuarios.isEmpty()) {
                     session.setAttribute("lista", usuarios);
                     session.setAttribute("flag", true);

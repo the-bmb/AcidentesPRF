@@ -1,5 +1,5 @@
-package mapeamento;
-// Generated 24/06/2018 02:43:00 by Hibernate Tools 4.3.1
+package mapeamento1;
+// Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1
 
 
 
@@ -10,6 +10,7 @@ public class Local  implements java.io.Serializable {
 
 
      private int id;
+     private Acidente acidente;
      private String uf;
      private Integer br;
      private String km;
@@ -22,8 +23,9 @@ public class Local  implements java.io.Serializable {
     public Local(int id) {
         this.id = id;
     }
-    public Local(int id, String uf, Integer br, String km, String municipio) {
+    public Local(int id, Acidente acidente, String uf, Integer br, String km, String municipio) {
        this.id = id;
+       this.acidente = acidente;
        this.uf = uf;
        this.br = br;
        this.km = km;
@@ -36,6 +38,13 @@ public class Local  implements java.io.Serializable {
     
     public void setId(int id) {
         this.id = id;
+    }
+    public Acidente getAcidente() {
+        return this.acidente;
+    }
+    
+    public void setAcidente(Acidente acidente) {
+        this.acidente = acidente;
     }
     public String getUf() {
         return this.uf;

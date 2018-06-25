@@ -1,5 +1,5 @@
-package mapeamento;
-// Generated 24/06/2018 02:43:00 by Hibernate Tools 4.3.1
+package mapeamento1;
+// Generated 25/06/2018 17:10:40 by Hibernate Tools 4.3.1
 
 
 
@@ -10,6 +10,7 @@ public class Condicao  implements java.io.Serializable {
 
 
      private int id;
+     private Acidente acidente;
      private String causaAcidente;
      private String tipoAcidente;
      private String classificacaoAcidente;
@@ -27,8 +28,9 @@ public class Condicao  implements java.io.Serializable {
     public Condicao(int id) {
         this.id = id;
     }
-    public Condicao(int id, String causaAcidente, String tipoAcidente, String classificacaoAcidente, String faseDia, String sentidoVia, String condMetereologico, String tipoPista, String tracadoVia, String usoSolo) {
+    public Condicao(int id, Acidente acidente, String causaAcidente, String tipoAcidente, String classificacaoAcidente, String faseDia, String sentidoVia, String condMetereologico, String tipoPista, String tracadoVia, String usoSolo) {
        this.id = id;
+       this.acidente = acidente;
        this.causaAcidente = causaAcidente;
        this.tipoAcidente = tipoAcidente;
        this.classificacaoAcidente = classificacaoAcidente;
@@ -46,6 +48,13 @@ public class Condicao  implements java.io.Serializable {
     
     public void setId(int id) {
         this.id = id;
+    }
+    public Acidente getAcidente() {
+        return this.acidente;
+    }
+    
+    public void setAcidente(Acidente acidente) {
+        this.acidente = acidente;
     }
     public String getCausaAcidente() {
         return this.causaAcidente;

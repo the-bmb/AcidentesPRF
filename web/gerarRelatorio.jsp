@@ -12,7 +12,7 @@
                             <table class="table table-striped">
                                 <tr>
                                     <th>${titulo}</th>
-                                    <th>Quantidade de Ocorrências</th>
+                                    <th>Quantidade de Ocorrências - ${dInicial} a ${dFinal}</th>
                                 </tr>
                                 <c:forEach var="item" items="${mapa}">
                                     <tr>
